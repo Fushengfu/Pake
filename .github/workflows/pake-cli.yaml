@@ -28,12 +28,12 @@ on:
         description: '[Height, Optional]'
         required: false
         default: '780'
-      # safe_domain:
-      #   description: '[Safe Domain, Optional]'
-      #   required: false
-      user_agent:
-        description: '[user_agent]'
-        required: true
+      safe_domain:
+        description: '[Safe Domain, Optional]'
+        required: false
+      # user_agent:
+      #   description: '[user_agent]'
+      #   required: true
       hide_title_bar:
         description: '[Hide TitleBar, Optional, MacOS only]'
         required: false
@@ -135,8 +135,8 @@ jobs:
           RESIZE: ${{ inputs.resize }}
           MULTI_ARCH: ${{ inputs.multi_arch }}
           TARGETS: ${{ inputs.targets }}
-          USER_AGENT: ${{ inputs.user_agent }}
-          # SAFE_DOMAIN: ${{ inputs.safe_domain }}
+          USER_AGENT: 'lmkclient'
+          SAFE_DOMAIN: ${{ inputs.safe_domain }}
 
       - name: Upload archive
         uses: actions/upload-artifact@v3
