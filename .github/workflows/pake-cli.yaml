@@ -14,9 +14,6 @@ on:
       url:
         description: '[URL]'
         required: true
-      user_agent:
-        description: '[user-agent]'
-        required: true
       name:
         description: '[Name]'
         required: true
@@ -135,7 +132,7 @@ jobs:
           RESIZE: ${{ inputs.resize }}
           MULTI_ARCH: ${{ inputs.multi_arch }}
           TARGETS: ${{ inputs.targets }}
-          USER_AGENT: ${{ inputs.user_agent }}
+          USER_AGENT: 'lmkclient'
           SAFE_DOMAIN: ${{ inputs.safe_domain }}
 
       - name: Upload archive
