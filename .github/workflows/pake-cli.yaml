@@ -14,7 +14,7 @@ on:
       url:
         description: '[URL]'
         required: true
-      user-agent:
+      user_agent:
         description: '[user-agent]'
         required: true
       name:
